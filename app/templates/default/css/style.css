@@ -1,0 +1,205 @@
+* {
+    border-radius: 0 !important;
+}
+
+body {
+    height: 1000px;
+}
+
+/* -------------------------------- 
+
+    Navbar
+    
+-------------------------------- */
+
+.navbar-default {
+    background-color: #622599;
+    border-color: #622599;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: rgba(255, 255, 255, 0.50);
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #ffffff;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color: #501E7D; /*700*/
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #ffffff;
+    background-color: #622599; /*500*/
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    background-color: #3E1761; /*800*/
+    color: #ffffff;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #7641A6; /*400*/
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: #7641A6;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ffffff;
+}
+
+@media (min-width: 768px) {
+    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+        margin-left: 0px;
+    }
+}
+
+.ft {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+#logo {
+    background: #0054A0 url(../img/logo.png) no-repeat center 50%; /*#40235B*/
+    z-index: 99999;
+    top: 0;
+    position: fixed;
+    left: 0;
+    width: 50px;
+    height: 50px;
+}
+
+/* -------------------------------- 
+cd
+-------------------------------- */
+
+.cd-container {
+    /*width: 90%;
+  max-width: 768px;*/
+    margin: 2em auto;
+}
+
+.cd-container::after {
+    /* clearfix */
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.cd-top {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    /* image replacement properties */
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    background: rgba(232, 98, 86, 0.8) url(../img/cd-top-arrow.svg) no-repeat center 50%;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+    -moz-transition: opacity .3s 0s, visibility 0s .3s;
+    transition: opacity .3s 0s, visibility 0s .3s;
+}
+
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s;
+}
+
+.cd-top.cd-is-visible {
+    /* the button becomes visible */
+    visibility: visible;
+    opacity: 1;
+}
+
+.cd-top.cd-fade-out {
+    /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+    opacity: .5;
+}
+
+.no-touch .cd-top:hover {
+    background-color: #e86256;
+    opacity: 1;
+}
+
+@media only screen and (min-width: 768px) {
+    .cd-top {
+        right: 20px;
+        bottom: 20px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .cd-top {
+        height: 60px;
+        width: 60px;
+        right: 30px;
+        bottom: 30px;
+    }
+}
+
+/* -------------------------------- 
+
+    Feedback
+    
+-------------------------------- */
+
+.feedback {
+    position: fixed;
+    top: 50%;
+    right: 0%;
+    /*padding: 10px;*/
+    background-color: #622599;
+    color: #ffffff;
+    border: thin solid #3E1761;
+    font-size: larger;
+}
+
+.feedback a, .feedback a:hover, .feedback a:focus {
+    color: #ffffff;
+}
+
+
+/*
+    */
+
+#adults:hover
+{
+    background-color: #E23D28 !important;
+    color: #ffffff;
+}
+
+#young:hover
+{
+    background-color: #AABA0A !important;
+    color: #ffffff;
+}
+
+#sponsors:hover
+{
+    background-color: #3D8E33 !important;
+    color: #ffffff;
+}
+
+.intitute:hover
+{
+    /*#0054A0*/
+    background-color: #0054A0 !important;
+    color: #ffffff;
+}
