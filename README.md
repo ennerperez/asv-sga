@@ -1,2 +1,2 @@
 # asv-sga
-Asociación de Scouts de Venezuela - Sistema de Gestion Administrativa
+Asociación de Scouts de Venezuela - Sistema de Gestión Administrativa
