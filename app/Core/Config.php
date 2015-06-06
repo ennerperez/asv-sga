@@ -21,7 +21,7 @@ class Config
         ob_start();
 
         //site address
-        define('DIR', 'http://localhost/');
+        define('DIR', 'http://'.$_SERVER['HTTP_HOST'].'/');
 
         //set default controller and method for legacy calls
         define('DEFAULT_CONTROLLER', 'welcome');
