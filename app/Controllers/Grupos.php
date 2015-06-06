@@ -7,20 +7,20 @@ use Core\Controller;
 
 class Grupos extends Controller
 {
-	private $grupos;
+	private $modelo;
     public function __construct()
     {
         parent::__construct();
         $this->language->load('Grupos');
-        $this->grupos = new \Models\Grupo();
+        $this->modelo = new \Models\Grupo();
     }
         
     public function index()
     {
     
-        $data['title'] = $this->language->get('welcome_text');
-        $data['welcome_message'] = $this->language->get('welcome_message');
-        $data['entries'] = $this->grupos->getGrupos();
+        $data['title'] = $this->language->get('title');
+        $data['subtitle'] = $this->language->get('subtitle');
+        $data['entries'] = $this->modelo->getGrupos();
     
         View::renderTemplate('header', $data);
         View::renderTemplate('navbar', $data);

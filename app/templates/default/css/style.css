@@ -12,45 +12,8 @@ body {
     
 -------------------------------- */
 
-.navbar-default {
-    background-color: #622599;
-}
-
-.navbar-default .navbar-nav > li > a {
-    color: rgba(255, 255, 255, 0.50);
-}
-
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    color: #ffffff;
-}
-
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-    color: #ffffff;
-    background-color: #501E7D; /*700*/
-}
-
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    color: #ffffff;
-    background-color: #622599; /*500*/
-}
-
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-    background-color: #3E1761; /*800*/
-    color: #ffffff;
-}
-
-.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
-    text-decoration: none;
-    color: #ffffff;
-    background-color: #7641A6; /*400*/
-}
-
 .navbar-default .navbar-toggle {
     border-color: transparent;
-}
-
-.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
-    background-color: #7641A6;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -63,9 +26,15 @@ body {
     }
 }
 
-.ft {
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+        color: #FFFFFF;
+    }
+}
+
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse
+{
+    max-height: none;
 }
 
 #logo {
@@ -83,8 +52,6 @@ cd
 -------------------------------- */
 
 .cd-container {
-    /*width: 90%;
-  max-width: 768px;*/
     margin: 2em auto;
 }
 
@@ -171,34 +138,5 @@ cd
 }
 
 .feedback a, .feedback a:hover, .feedback a:focus {
-    color: #ffffff;
-}
-
-
-/*
-    */
-
-#adults:hover
-{
-    background-color: #E23D28 !important;
-    color: #ffffff;
-}
-
-#young:hover
-{
-    background-color: #AABA0A !important;
-    color: #ffffff;
-}
-
-#sponsors:hover
-{
-    background-color: #3D8E33 !important;
-    color: #ffffff;
-}
-
-.intitute:hover
-{
-    /*#0054A0*/
-    background-color: #0054A0 !important;
     color: #ffffff;
 }

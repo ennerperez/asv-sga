@@ -1,4 +1,15 @@
-<nav class="navbar navbar-default navbar-fixed-top">
+<?php 
+
+use Core\Language;
+
+$menu = new Language();
+$menu->load('Menu');
+    
+$scout_css = "scout-bg";
+$scout_css ="scout-".substr($_SERVER['REQUEST_URI'],1)."-bg";
+
+?>
+<nav class="navbar navbar-default navbar-fixed-top <?php echo $scout_css; ?>">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -19,50 +30,50 @@
             <ul class="nav navbar-nav">
                 <!-- <span class="sr-only">(current)</span> -->
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="ft"><i class="fa fa-sitemap hidden-md"></i><span class="ft hidden-sm">Organización</span></span><span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="ft"><i class="fa fa-sitemap hidden-md"></i><span class="ft hidden-sm"><?php echo $menu->get('organizacion'); ?></span></span><span class="caret hidden-xs"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a class="intitute" href="/regiones">Regiones</a></li>
-                        <li><a class="intitute" href="/distritos">Distritos</a></li>
+                        <li><a href="/regiones"><?php echo $menu->get('regiones'); ?></a></li>
+                        <li><a href="/distritos"><?php echo $menu->get('distritos'); ?></a></li>
                         <li class="divider"></li>
-                        <li><a class="intitute" href="/grupos">Grupos</a></li>
+                        <li><a href="/grupos"><?php echo $menu->get('grupos'); ?></a></li>
                         <li class="divider"></li>
-                        <li><a class="intitute" href="/patrullas">Patrullas</a></li>
+                        <li><a href="/patrullas"><?php echo $menu->get('patrullas'); ?></a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="ft"><i class="fa fa-users hidden-md"></i><span class="ft hidden-sm">Directorio</span></span><span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="ft"><i class="fa fa-users hidden-md"></i><span class="ft hidden-sm"><?php echo $menu->get('directorio'); ?></span></span><span class="caret hidden-xs"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="/directorio">General</a></li>
+                        <li><a href="/directorio"><?php echo $menu->get('general'); ?></a></li>
                         <li class="divider"></li>
-                        <li><a id="adults" href="/adultos">Adultos</a></li>
-                        <li><a id="young" href="/jovenes">Jovenes</a></li>
+                        <li><a id="adultos" href="/adultos"><?php echo $menu->get('adultos'); ?></a></li>
+                        <li><a id="jovenes" href="/jovenes"><?php echo $menu->get('jovenes'); ?></a></li>
                         <li class="divider"></li>
-                        <li><a id="sponsors" href="/patrocinantes">Patrocinantes</a></li>
+                        <li><a id="patrocinantes" href="/patrocinantes"><?php echo $menu->get('patrocinantes'); ?></a></li>
                     </ul>
                 </li>
 
             </ul>
-            <form class="navbar-form navbar-left" role="search">
+            <form class="navbar-form navbar-left hidden-xs " role="search">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Buscar...">
+                    <input type="text" class="form-control" placeholder="<?php echo $menu->get('buscar'); ?>">
                 </div>
                 <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
             </form>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="ft"><i class="fa fa-bell-slash hidden-md"></i><span class="ft hidden-sm">Alertas</span></span><span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="ft"><i class="fa fa-bell-slash hidden-md"></i><span class="ft hidden-sm"><?php echo $menu->get('alertas'); ?></span></span><span class="caret hidden-xs"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li class="disabled"><a href="#">No hay nuevas alertas</a></li>
+                        <li class="disabled"><a href="#"><?php echo $menu->get('sinalertas'); ?></a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="ft"><i class="fa fa-user hidden-md"></i><span class="ft hidden-sm">Usuario</span></span><span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="ft"><i class="fa fa-user hidden-md"></i><span class="ft hidden-sm"><?php echo $menu->get('usuario'); ?></span></span><span class="caret hidden-xs"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Perfil</a></li>
-                        <li><a href="#">Historial</a></li>
-                        <li><a href="#">Accesos</a></li>
+                        <li><a href="#"><?php echo $menu->get('perfil'); ?></a></li>
+                        <li><a href="#"><?php echo $menu->get('historial'); ?></a></li>
+                        <li><a href="#"><?php echo $menu->get('accesos'); ?></a></li>
                         <li class="divider"></li>
-                        <li><a href="#">Cerrar</a></li>
+                        <li><a href="#"><?php echo $menu->get('cerrar'); ?></a></li>
                     </ul>
                 </li>
             </ul>

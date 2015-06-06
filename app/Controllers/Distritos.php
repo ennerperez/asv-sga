@@ -7,20 +7,20 @@ use Core\Controller;
 
 class Distritos extends Controller
 {
-	private $distritos;
+	private $modelo;
     public function __construct()
     {
         parent::__construct();
         $this->language->load('Distritos');
-        $this->distritos = new \Models\Distrito();
+        $this->modelo = new \Models\Distrito();
     }
         
     public function index()
     {
     
-        $data['title'] = $this->language->get('welcome_text');
-        $data['welcome_message'] = $this->language->get('welcome_message');
-        $data['entries'] = $this->distritos->getDistritos();
+        $data['title'] = $this->language->get('title');
+        $data['subtitle'] = $this->language->get('subtitle');
+        $data['entries'] = $this->modelo->getDistritos();
     
         View::renderTemplate('header', $data);
         View::renderTemplate('navbar', $data);

@@ -17,6 +17,9 @@ $hooks = Hooks::get();
 	//hook for plugging in meta tags
 	$hooks->run('meta');
 	?>
+
+    <meta name="description" content="" />
+
 	<title><?php echo $data['title'].' - '.SITETITLE; //SITETITLE defined in app/Core/Config.php ?></title>
 	
 	<!-- Favicon -->
@@ -35,6 +38,7 @@ $hooks = Hooks::get();
 		'//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css',
 		'//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css',
 		Url::templatePath() . 'css/style.css',
+        Url::templatePath() . 'css/scouts.css'
 	));
 	
 	//hook for plugging in css
@@ -54,4 +58,4 @@ $hooks = Hooks::get();
 $hooks->run('afterBody');
 ?>
 
-<div class="container cd-container">
+<div class="container-fluid cd-container">

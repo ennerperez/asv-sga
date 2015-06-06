@@ -7,20 +7,20 @@ use Core\Controller;
 
 class Regiones extends Controller
 {
-	private $regiones;
+	private $modelo;
     public function __construct()
     {
         parent::__construct();
         $this->language->load('Regiones');
-        $this->regiones = new \Models\Region();
+        $this->modelo = new \Models\Region();
     }
         
     public function index()
     {
     
-        $data['title'] = $this->language->get('welcome_text');
-        $data['welcome_message'] = $this->language->get('welcome_message');
-        $data['entries'] = $this->regiones->getRegiones();
+        $data['title'] = $this->language->get('title');
+        $data['subtitle'] = $this->language->get('subtitle');
+        $data['entries'] = $this->modelo->getRegiones();
     
         View::renderTemplate('header', $data);
         View::renderTemplate('navbar', $data);

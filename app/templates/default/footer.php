@@ -9,7 +9,7 @@ $hooks = Hooks::get();
 ?>
 
 </div>
-<a href="#0" class="cd-top">Arriba</a>
+<a href="#0" class="cd-top"></a>
 
 <!-- JS -->
 <?php

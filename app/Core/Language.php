@@ -45,10 +45,16 @@ class Language
      * @param  string $value
      * @return string
      */
-    public function get($value)
+    public function get($value, $index = NULL)
     {
         if (!empty($this->array[$value])) {
-            return $this->array[$value];
+            if (!isset($index)){
+                return $this->array[$value];
+            }
+            else {
+                $return =$this->array[$value];
+                return $return[$index];
+            }
         } else {
             return $value;
         }

@@ -7,7 +7,7 @@
     <div class="page-header">
         <h1><?php echo $data['title'] ?></h1>
     </div>
-    <p><?php echo $data['welcome_message'] ?></p>
+    <p><?php echo $data['subtitle'] ?></p>
     <p><?php
         
         if ($data['entries']) {

@@ -88,6 +88,7 @@ class Database extends PDO
      */
     public function select($sql, $array = array(), $fetchMode = PDO::FETCH_OBJ, $class = '')
     {
+
         $stmt = $this->prepare($sql);
         foreach ($array as $key => $value) {
             if (is_int($value)) {

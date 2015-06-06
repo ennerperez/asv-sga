@@ -7,20 +7,20 @@ use Core\Controller;
 
 class Patrullas extends Controller
 {
-	private $patrullas;
+	private $modelo;
     public function __construct()
     {
         parent::__construct();
         $this->language->load('Patrullas');
-        $this->patrullas = new \Models\Patrulla();
+        $this->modelo = new \Models\Patrulla();
     }
         
     public function index()
     {
     
-        $data['title'] = $this->language->get('welcome_text');
-        $data['welcome_message'] = $this->language->get('welcome_message');
-        $data['entries'] = $this->patrullas->getPatrullas();
+        $data['title'] = $this->language->get('title');
+        $data['subtitle'] = $this->language->get('subtitle');
+        $data['entries'] = $this->modelo->getPatrullas();
     
         View::renderTemplate('header', $data);
         View::renderTemplate('navbar', $data);
