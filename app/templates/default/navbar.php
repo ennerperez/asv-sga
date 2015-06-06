@@ -21,23 +21,23 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="ft"><i class="fa fa-sitemap hidden-md"></i><span class="ft hidden-sm">Organización</span></span><span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a class="intitute" href="#">Regiones</a></li>
-                        <li><a class="intitute" href="#">Distritos</a></li>
+                        <li><a class="intitute" href="/regiones">Regiones</a></li>
+                        <li><a class="intitute" href="/distritos">Distritos</a></li>
                         <li class="divider"></li>
-                        <li><a class="intitute" href="#">Grupos</a></li>
+                        <li><a class="intitute" href="/grupos">Grupos</a></li>
                         <li class="divider"></li>
-                        <li><a class="intitute" href="#">Patrullas</a></li>
+                        <li><a class="intitute" href="/patrullas">Patrullas</a></li>
                     </ul>
                 </li>
-                <li class="dropdown active">
+                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="ft"><i class="fa fa-users hidden-md"></i><span class="ft hidden-sm">Directorio</span></span><span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="/directory">General</a></li>
+                        <li><a href="/directorio">General</a></li>
                         <li class="divider"></li>
-                        <li><a id="adults" href="/directory">Adultos</a></li>
-                        <li><a id="young" href="/directory">Jovenes</a></li>
+                        <li><a id="adults" href="/adultos">Adultos</a></li>
+                        <li><a id="young" href="/jovenes">Jovenes</a></li>
                         <li class="divider"></li>
-                        <li><a id="sponsors" href="/directory">Patrocinantes</a></li>
+                        <li><a id="sponsors" href="/patrocinantes">Patrocinantes</a></li>
                     </ul>
                 </li>
 

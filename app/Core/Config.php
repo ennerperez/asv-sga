@@ -34,12 +34,24 @@ class Config
         define('LANGUAGE_CODE', 'es');
 
         //database details ONLY NEEDED IF USING A DATABASE
-        define('DB_TYPE', 'mysql');
-        define('DB_HOST', 'localhost');
-        define('DB_NAME', 'asv');
-        define('DB_USER', 'root');
-        define('DB_PASS', '123456');
-        define('PREFIX', 'sga_');
+         switch (ENVIRONMENT) {
+             case 'development':
+                define('DB_TYPE', 'mysql');
+                define('DB_HOST', 'localhost');
+                define('DB_NAME', 'scouts');
+                define('DB_USER', 'root');
+                define('DB_PASS', '123c4F50');
+                define('PREFIX', '');
+               break;
+             default:
+                 define('DB_TYPE', 'mysql');
+                 define('DB_HOST', 'localhost');
+                 define('DB_NAME', 'asv');
+                 define('DB_USER', 'root');
+                 define('DB_PASS', '123456');
+                 define('PREFIX', 'sga_');
+                 break;
+         }
 
         //set prefix for sessions
         define('SESSION_PREFIX', 'asv_');

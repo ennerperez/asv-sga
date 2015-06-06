@@ -33,6 +33,7 @@ class Welcome extends Controller
         $data['welcome_message'] = $this->language->get('welcome_message');
 
         View::renderTemplate('header', $data);
+        View::renderTemplate('navbar', $data);
         View::render('welcome/welcome', $data);
         View::renderTemplate('footer', $data);
     }
@@ -46,6 +47,7 @@ class Welcome extends Controller
         $data['welcome_message'] = $this->language->get('subpage_message');
 
         View::renderTemplate('header', $data);
+        View::renderTemplate('navbar', $data);
         View::render('Welcome/SubPage', $data);
         View::renderTemplate('footer', $data);
     }

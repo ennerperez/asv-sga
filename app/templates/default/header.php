@@ -54,4 +54,4 @@ $hooks = Hooks::get();
 $hooks->run('afterBody');
 ?>
 
-<div class="container-fluid cd-containe">
+<div class="container cd-container">
