@@ -1,13 +1,14 @@
 <?php
     
     return array(
-    
-        'organizacion' =>  'Organización',
+        'inicio' =>  'Inicio',
+        'estructura' =>  'Estructura',
+        'directorio' =>  'Directorio',
+
         'regiones' => 'Regiones',
         'distritos' => 'Distritos',
         'grupos' => 'Grupos',
         'patrullas' => 'Patrullas',
-        'directorio' =>  'Directorio',
         'general' =>  'General',
         'adultos' =>  'Adultos',
         'jovenes' =>  'Jovenes',

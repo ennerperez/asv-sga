@@ -1,0 +1,224 @@
+*:not(.fa,.caret)
+{
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif !important;
+}
+
+.navbar-default .navbar-nav > li > a > span,
+.navbar-default .navbar-nav > li > a > span > .fa {
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+}
+
+/* -------------------------------- 
+
+    Navbar
+    
+-------------------------------- */
+
+.scout-bg, 
+.scout-general-bg,
+.navbar-default {
+    /* 700 */
+    background-color: #501E7D; 
+    
+}
+
+.scout-sbg, 
+.scout-general-sbg,
+.header-section, .masthead {
+    /*500*/
+    background-color: #622599;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav > li > a:focus {
+    color: #ffffff;
+}
+
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    /*700*/
+    background-color: #501E7D; 
+    color: #ffffff;
+}
+
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus {
+    /*800*/
+    background-color: #3E1761; 
+    color: #ffffff;
+}
+
+.navbar-default .dropdown-menu > li > a:hover, 
+.navbar-default .dropdown-menu > li > a:focus {
+    /*400*/
+    background-color: #7641A6; 
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.navbar-default .navbar-toggle:focus, 
+.navbar-default .navbar-toggle:hover {
+    /*400*/
+    background-color: #7641A6;
+}
+
+/* -------------------------------- 
+
+    Adultos
+    
+-------------------------------- */
+
+.scout-adultos-bg {
+    /* 700 */
+    background-color: #B93220; 
+    color: #FFFFFF;
+}
+
+.scout-adultos-sbg,
+.scout-adultos-bg .navbar-nav > .active > a, 
+.scout-adultos-bg .navbar-nav > .active > a:hover, 
+.scout-adultos-bg .navbar-nav > .active > a:focus {
+    /*500*/
+    
+    background-color: #E23D28;
+    color: #ffffff;
+}
+
+.scout-adultos-bg .navbar-nav > .open > a, 
+.scout-adultos-bg .navbar-nav > .open > a:hover, 
+.scout-adultos-bg .navbar-nav > .open > a:focus {
+    /*800*/
+    background-color: #902719; 
+    color: #ffffff;
+}
+
+.scout-adultos-bg .dropdown-menu > li > a:hover, 
+.scout-adultos-bg .dropdown-menu > li > a:focus {
+    /*400*/
+    background-color: #E55643; 
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.scout-adultos-bg .navbar-toggle:focus, 
+.scout-adultos-bg .navbar-toggle:hover {
+    /*400*/
+    background-color: #E55643;
+}
+
+/* -------------------------------- 
+
+    Jovenes
+    
+-------------------------------- */
+
+.scout-jovenes-bg {
+    /* 700 */
+    background-color: #8B9808; 
+    color: #FFFFFF;
+}
+
+.scout-jovenes-sbg,
+.scout-jovenes-bg .navbar-nav > .active > a, 
+.scout-jovenes-bg .navbar-nav > .active > a:hover, 
+.scout-jovenes-bg .navbar-nav > .active > a:focus {
+    /*500*/
+    background-color: #AABA0A;
+    color: #ffffff;
+}
+
+.scout-jovenes-bg .navbar-nav > .open > a, 
+.scout-jovenes-bg .navbar-nav > .open > a:hover, 
+.scout-jovenes-bg .navbar-nav > .open > a:focus {
+    /*800*/
+    background-color: #6C7706; 
+    color: #ffffff;
+}
+
+.scout-jovenes-bg .dropdown-menu > li > a:hover, 
+.scout-jovenes-bg .dropdown-menu > li > a:focus {
+    /*400*/
+    background-color: #B5C229; 
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.scout-jovenes-bg .navbar-toggle:focus, 
+.scout-jovenes-bg .navbar-toggle:hover {
+    /*400*/
+    background-color: #B5C229;
+}
+
+/* -------------------------------- 
+
+    Patrocinantes
+    
+-------------------------------- */
+
+.scout-patrocinantes-bg {
+    /* 700 */
+    background-color: #327429; 
+    color: #FFFFFF;
+}
+
+.scout-patrocinantes-sbg,
+.scout-patrocinantes-bg .navbar-nav > .active > a, 
+.scout-patrocinantes-bg .navbar-nav > .active > a:hover, 
+.scout-patrocinantes-bg .navbar-nav > .active > a:focus {
+    /*500*/
+    background-color: #3D8E33;
+    color: #ffffff;
+}
+
+.scout-patrocinantes-bg .navbar-nav > .open > a, 
+.scout-patrocinantes-bg .navbar-nav > .open > a:hover, 
+.scout-patrocinantes-bg .navbar-nav > .open > a:focus {
+    /*800*/
+    background-color: #275A20; 
+    color: #ffffff;
+}
+
+.scout-patrocinantes-bg .dropdown-menu > li > a:hover, 
+.scout-patrocinantes-bg .dropdown-menu > li > a:focus {
+    /*400*/
+    background-color: #569C4D; 
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.scout-patrocinantes-bg .navbar-toggle:focus, 
+.scout-patrocinantes-bg .navbar-toggle:hover {
+    /*400*/
+    background-color: #569C4D;
+}
+
+/* -------------------------------- 
+
+    Definiciones
+    
+-------------------------------- */
+
+#adultos:hover
+{
+    background-color: #E23D28 !important;
+    color: #ffffff;
+}
+
+#jovenes:hover
+{
+    background-color: #AABA0A !important;
+    color: #ffffff;
+}
+
+#patrocinantes:hover
+{
+    background-color: #3D8E33 !important;
+    color: #ffffff;
+}

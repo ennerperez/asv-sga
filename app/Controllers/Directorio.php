@@ -4,9 +4,9 @@
     
     use Core\View;
     use Core\Controller;
-
+    
     use Models;
-
+    
     class Directorio extends Controller
     {
         private $modelo;
@@ -17,54 +17,42 @@
             $this->modelo = new \Models\Directorio();
         }
     
-        public function index()
+        private function render($data)
         {
-    
-            $data['title'] = $this->language->get('title', Models\Clases::General);
-            $data['subtitle'] = $this->language->get('subtitle', Models\Clases::General);
-            $data['entries'] = $this->modelo->getDirectorio(Models\Clases::General);
-    
             View::renderTemplate('header', $data);
             View::renderTemplate('navbar', $data);
             View::render('lists/directorio', $data);
             View::renderTemplate('footer', $data);
+        }
+    
+        public function index( $index = Models\Directorios::General)
+        {
+    
+            $data['title'] = $this->language->get('titles', $index);
+            $data['subtitle'] = $this->language->get('subtitles', $index);
+            $data['entries'] = $this->modelo->getDirectorio($index);
+
+            $this->render($data);
         }
     
         public function adultos()
         {
-
-            $data['title'] =$this->language->get('title', Models\Clases::Adulto);
-            $data['subtitle'] = $this->language->get('subtitle', Models\Clases::Adulto);
-            $data['entries'] = $this->modelo->getDirectorio(Models\Clases::Adulto);
-    
-            View::renderTemplate('header', $data);
-            View::renderTemplate('navbar', $data);
-            View::render('lists/directorio', $data);
-            View::renderTemplate('footer', $data);
+            return  $this->index(Models\Directorios::Adulto);
         }
     
         public function jovenes()
         {
-            $data['title'] = $this->language->get('title', Models\Clases::Joven);
-            $data['subtitle'] = $this->language->get('subtitle', Models\Clases::Joven);
-            $data['entries'] = $this->modelo->getDirectorio(Models\Clases::Joven);
-    
-            View::renderTemplate('header', $data);
-            View::renderTemplate('navbar', $data);
-            View::render('lists/directorio', $data);
-            View::renderTemplate('footer', $data);
+            return  $this->index(Models\Directorios::Joven);
         }
     
         public function patrocinantes()
         {
-            $data['title'] = $this->language->get('title', Models\Clases::Patrocinante);
-            $data['subtitle'] = $this->language->get('subtitle', Models\Clases::Patrocinante);
-            $data['entries'] = $this->modelo->getDirectorio(Models\Clases::Patrocinante);
-    
-            View::renderTemplate('header', $data);
-            View::renderTemplate('navbar', $data);
-            View::render('lists/directorio', $data);
-            View::renderTemplate('footer', $data);
+            return  $this->index(Models\Directorios::Patrocinante);
+        }
+
+        public function usuarios()
+        {
+            return  $this->index(Models\Directorios::Usuario);
         }
     
     }

@@ -1,0 +1,24 @@
+<h3>Exception information:</h3>
+
+           <p><strong>Date:</strong> Jun 07, 2015 23:46PM</p>
+
+           <p><strong>Message:</strong> SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty</p>
+
+           <p><strong>Code:</strong> 42000</p>
+
+           <p><strong>File:</strong> D:\Developments\GitHub\asv-sga\app\Helpers\Database.php</p>
+
+           <p><strong>Line:</strong> 101</p>
+
+           <h3>Stack trace:</h3>
+
+           <pre>#0 D:\Developments\GitHub\asv-sga\app\Helpers\Database.php(101): PDOStatement->execute()
+#1 D:\Developments\GitHub\asv-sga\app\Models\Estructura.php(38): Helpers\Database->select(NULL)
+#2 D:\Developments\GitHub\asv-sga\app\Controllers\Estructura.php(34): Models\Estructura->getEstructura(0)
+#3 D:\Developments\GitHub\asv-sga\app\Controllers\Estructura.php(42): Controllers\Estructura->index(0)
+#4 D:\Developments\GitHub\asv-sga\app\Core\Router.php(92): Controllers\Estructura->regiones()
+#5 D:\Developments\GitHub\asv-sga\app\Core\Router.php(219): Core\Router::invokeObject('Controllers\\Est...', Array)
+#6 D:\Developments\GitHub\asv-sga\index.php(88): Core\Router::dispatch()
+#7 {main}</pre>
+
+           <hr />

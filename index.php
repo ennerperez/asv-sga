@@ -61,17 +61,19 @@ use Core\Router;
 use Helpers\Hooks;
 
 //define routes
-Router::any('', 'Controllers\Welcome@index');
-// Router::any('subpage', 'Controllers\Welcome@subPage');
-Router::any('regiones', 'Controllers\Regiones@index');
-Router::any('distritos', 'Controllers\Distritos@index');
-Router::any('grupos', 'Controllers\Grupos@index');
-Router::any('patrullas', 'Controllers\Patrullas@index');
+Router::any('', 'Controllers\Estructura@index');
+
+Router::any('estructura', 'Controllers\Estructura@index');
+Router::any('regiones', 'Controllers\Estructura@regiones');
+Router::any('distritos', 'Controllers\Estructura@distritos');
+Router::any('grupos', 'Controllers\Estructura@grupos');
+Router::any('patrullas', 'Controllers\Estructura@patrullas');
 
 Router::any('directorio', 'Controllers\Directorio@index');
 Router::any('adultos', 'Controllers\Directorio@adultos');
 Router::any('jovenes', 'Controllers\Directorio@jovenes');
 Router::any('patrocinantes', 'Controllers\Directorio@patrocinantes');
+Router::any('usuarios', 'Controllers\Directorio@usuarios');
 
 //module routes
 $hooks = Hooks::get();

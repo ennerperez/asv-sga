@@ -2,7 +2,7 @@
 
 return array(
 
-	'title' => array('Directorio', 'Adultos', 'Jovenes', 'Patrocinantes'),
-	'subtitle' => array('Directorio', 'Adultos', 'Jovenes', 'Patrocinantes')
+	'titles' => array('General', 'Adultos', 'Jovenes', 'Patrocinantes','','','','','','Usuarios'),
+	'subtitles' => array('general', 'adultos', 'jovenes', 'patrocinantes')
     
 );
