@@ -1,15 +1,9 @@
 <?php
-    
-    
+   
     use Core\Language;
     
     $menu = new Language();
     $menu->load('Menu');
-    
-    //$scout_css = "scout-bg";
-    //$scout_css ="scout-".substr($_SERVER['REQUEST_URI'],1)."-bg";
-    
-    //php echo $scout_css;
     
 ?>
 <nav class="navbar navbar-default navbar-fixed-top navbar-pf" role="navigation">

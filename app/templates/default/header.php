@@ -34,6 +34,7 @@
                         //Url::templatePath() . 'css/font-awesome.css',
                         Url::templatePath() . 'css/jquery.dataTables.css',
                         Url::templatePath() . 'css/patternfly.css',
+                        Url::templatePath() . 'css/c3.css',
                         Url::templatePath() . 'css/scouts.css',
                         Url::templatePath() . 'css/style.css'
                     ));
@@ -44,6 +45,7 @@
                         '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css',
                         /*'//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css',*/
                         Url::templatePath() . 'css/patternfly.min.css',
+                        Url::templatePath() . 'css/c3.min.css',
                         Url::templatePath() . 'css/scouts.css',
                         Url::templatePath() . 'css/style.css'
                     ));
