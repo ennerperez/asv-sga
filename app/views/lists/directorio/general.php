@@ -1,4 +1,4 @@
-<table class="table table-responsive table-condensed table-striped table-hover">
+<table class="datatable table table-responsive table-condensed table-striped table-hover">
     <thead>
         <tr>
             <th>Cédula</th>

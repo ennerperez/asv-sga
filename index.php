@@ -61,13 +61,14 @@ use Core\Router;
 use Helpers\Hooks;
 
 //define routes
-Router::any('', 'Controllers\Estructura@index');
+Router::any('', 'Controllers\Inicio@dashboard');
 
 Router::any('estructura', 'Controllers\Estructura@index');
 Router::any('regiones', 'Controllers\Estructura@regiones');
 Router::any('distritos', 'Controllers\Estructura@distritos');
 Router::any('grupos', 'Controllers\Estructura@grupos');
 Router::any('patrullas', 'Controllers\Estructura@patrullas');
+Router::any('areas', 'Controllers\Estructura@areas');
 
 Router::any('directorio', 'Controllers\Directorio@index');
 Router::any('adultos', 'Controllers\Directorio@adultos');

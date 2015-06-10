@@ -34,18 +34,32 @@
         <ul class="nav navbar-nav navbar-utility">
             <li class="hidden-xs">
                 <a href="http://www.scoutsvenezuela.org.ve/soporte/?v=submit_ticket" target="_blank">
-                    <i class="fa fa-bug"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                    <i class="fa fa-bell-slash"></i>
-                    <?php echo $menu->get('sinalertas'); ?>
+                    <span class="fa fa-at"></span>
                 </a>
             </li>
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                    <i class="pficon pficon-user"></i>
+                <a href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+                    <span class="pficon pficon-info"></span>
+                    <?php echo $menu->get('alertas'); ?>
+                </a>
+                <div class="dropdown-menu infotip bottom-right">
+          <div class="arrow"></div>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <span class="i pficon pficon-info"></span>
+               <?php echo $menu->get('sinalertas'); ?>
+            </li>
+            <!--<li class="list-group-item">
+              <span class="i pficon pficon-info"></span>
+              Modified Datasources ExampleDS
+            </li>-->
+          </ul>
+          <div class="footer"><a href="#">Limipiar</a></div>
+        </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+                    <span class="pficon pficon-user"></span>
                     <?php echo $menu->get('usuario'); ?>
                     <b class="caret"></b>
                 </a>

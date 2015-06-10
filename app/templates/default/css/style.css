@@ -66,18 +66,15 @@
     background-image: none;
 }
 
-.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus ,
-.sidebar-pf .nav-pills>li>a:hover {
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .sidebar-pf .nav-pills > li > a:hover {
     text-decoration: none;
     color: #fff;
     background-color: #622599;
     border-color: transparent !important;
 }
 
-.sidebar-pf .nav-pills>li>a:hover > i
-{
+.sidebar-pf .nav-pills > li > a:hover > i {
     color: #fff;
-    
 }
 
 

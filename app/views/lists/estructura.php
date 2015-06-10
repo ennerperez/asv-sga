@@ -22,7 +22,7 @@
             <div class="nav-category">
                 <h2>Otros</h2>
                 <ul class="nav nav-pills nav-stacked">
-                    <li><a href="/departamentos"><i class="fa fa-cube"></i>Departamentos</a></li>
+                    <li><a href="/areas"><i class="fa fa-cube"></i>Areas</a></li>
                 </ul>
             </div>
         </div>
@@ -30,3 +30,10 @@
 </div>
 
 <?php View::render('elements/md-button'); ?>
+
+<script>
+    // Initialize Datatables
+    $(document).ready(function() {
+      $('.datatable').dataTable();
+    });
+</script>

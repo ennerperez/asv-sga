@@ -30,3 +30,10 @@
 </div>
 
 <?php View::render('elements/md-button'); ?>
+
+<script>
+    // Initialize Datatables
+    $(document).ready(function() {
+      $('.datatable').dataTable();
+    });
+</script>
