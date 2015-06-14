@@ -61,7 +61,14 @@ use Core\Router;
 use Helpers\Hooks;
 
 //define routes
-Router::any('', 'Controllers\Inicio@dashboard');
+Router::any('', 'Controllers\Inicio@index');
+Router::any('admin', 'Controllers\Inicio@dashboard');
+
+//Router::any('login', 'Controllers\Admin@login');
+Router::get('login', 'Controllers\Admin@login');
+Router::post('login', 'Controllers\Admin@login');
+Router::get('logout', 'Controllers\Admin@logout');
+//Router::any('logout', 'Controllers\Admin@logout');
 
 Router::any('estructura', 'Controllers\Estructura@index');
 Router::any('regiones', 'Controllers\Estructura@regiones');

@@ -10,7 +10,6 @@
     
 ?>
 
-
 <div class="container-fluid" style="padding-top: 70px;">
     <div class="row">
         <div class="col-sm-8 col-md-9">

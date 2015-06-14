@@ -4,6 +4,9 @@
     
     use Core\View;
     use Core\Controller;
+
+    use Helpers\Session;
+    use Helpers\Url;
     
     use Models;
     
@@ -28,6 +31,8 @@
     
         public function index($index = Models\Estructuras::Region)
         {
+
+            if(Session::get('loggin') == false) { Url::redirect(''); }
     
             $data['title'] = $this->language->get('titles', $index);
             $data['subtitle'] = $this->language->get('subtitles',$index);

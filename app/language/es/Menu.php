@@ -5,6 +5,8 @@
         'estructura' =>  'Estructura',
         'directorio' =>  'Directorio',
 
+        'iniciar' =>  'Iniciar sesión',
+
         'regiones' => 'Regiones',
         'distritos' => 'Distritos',
         'grupos' => 'Grupos',

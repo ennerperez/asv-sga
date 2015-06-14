@@ -1,7 +1,10 @@
 <?php
-   
-    use Core\Language;
     
+    use Core\Language;
+    use Core\View;
+
+    use Helpers\Session;
+
     $menu = new Language();
     $menu->load('Menu');
     
@@ -32,44 +35,14 @@
                 </a>
             </li>
             <li class="dropdown">
-                <a href="#" data-toggle="dropdown" role="button" aria-expanded="false">
-                    <span class="pficon pficon-info"></span>
-                    <?php echo $menu->get('alertas'); ?>
-                </a>
-                <div class="dropdown-menu infotip bottom-right">
-          <div class="arrow"></div>
-          <ul class="list-group">
-            <li class="list-group-item">
-              <span class="i pficon pficon-info"></span>
-               <?php echo $menu->get('sinalertas'); ?>
-            </li>
-            <!--<li class="list-group-item">
-              <span class="i pficon pficon-info"></span>
-              Modified Datasources ExampleDS
-            </li>-->
-          </ul>
-          <div class="footer"><a href="#">Limipiar</a></div>
-        </div>
+                 <?php if (Session::get('loggin') == true) { View::render('admin/alerts');} ?>
             </li>
             <li class="dropdown">
-                <a href="#" data-toggle="dropdown" role="button" aria-expanded="false">
-                    <span class="pficon pficon-user"></span>
-                    <?php echo $menu->get('usuario'); ?>
-                    <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu" role="menu">
-                    <li><a href="#"><?php echo $menu->get('perfil'); ?></a></li>
-                    <li><a href="#"><?php echo $menu->get('historial'); ?></a></li>
-                    <li><a href="#"><?php echo $menu->get('accesos'); ?></a></li>
-                    <li class="divider"></li>
-                    <li><a href="#"><?php echo $menu->get('cerrar'); ?></a></li>
-                </ul>
+                <?php if (Session::get('loggin') == true) { View::render('admin/menu');}
+                                                   else { View::render('admin/login', $data);} ?>
             </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-primary">
-            <li><a href="/"><?php echo $menu->get('inicio'); ?></a></li>
-            <li><a href="/estructura"><?php echo $menu->get('estructura'); ?></a></li>
-            <li><a href="/directorio"><?php echo $menu->get('directorio'); ?></a></li>
-        </ul>
+        </ul>       
+            <?php if (Session::get('loggin') == true) { View::render('admin/navbar');}
+                                                   else { View::render('navbar', $data);} ?>
     </div>
 </nav>

@@ -7,6 +7,10 @@
     margin: 0px !important;
 }
 
+.navbar-nav {
+    min-height: 43px;
+}
+
 .navbar-brand-title {
     color: white;
     margin-left: 32px;
