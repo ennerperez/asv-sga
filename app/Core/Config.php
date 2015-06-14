@@ -40,7 +40,7 @@ class Config
                 define('DB_HOST', 'localhost');
                 define('DB_NAME', 'scouts');
                 define('DB_USER', 'root');
-                define('DB_PASS', '123c4F50');
+                define('DB_PASS', '123456');
                 define('PREFIX', '');
                break;
              default:
