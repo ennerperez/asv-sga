@@ -74,12 +74,19 @@ Router::any('estructura', 'Controllers\Estructura@index');
 Router::any('regiones', 'Controllers\Estructura@regiones');
 Router::any('distritos', 'Controllers\Estructura@distritos');
 Router::any('grupos', 'Controllers\Estructura@grupos');
+
+Router::any('grupos/nuevo', 'Controllers\Estructura@nuevo_grupo');
+
 Router::any('patrullas', 'Controllers\Estructura@patrullas');
 Router::any('areas', 'Controllers\Estructura@areas');
 
 Router::any('directorio', 'Controllers\Directorio@index');
 Router::any('adultos', 'Controllers\Directorio@adultos');
+
+Router::any('adultos/nuevo', 'Controllers\Directorio@nuevo_adulto');
+
 Router::any('jovenes', 'Controllers\Directorio@jovenes');
+
 Router::any('patrocinantes', 'Controllers\Directorio@patrocinantes');
 Router::any('usuarios', 'Controllers\Directorio@usuarios');
 

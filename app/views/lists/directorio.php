@@ -6,7 +6,12 @@
 <div class="container-fluid" style="padding-top: 70px;">
     <div class="row">
         <div class="col-sm-9 col-md-10 col-sm-push-3 col-md-push-2">
+            <ol class="breadcrumb">
+                <li><a href="#">Inicio</a></li>
+                <li>Directorio</li>
+            </ol>
             <h1><?php echo $data['title']; ?></h1>
+            <hr />
             <?php View::render('lists/directorio/'.strtolower ($data['title']), $data); ?>
         </div>
         <div class="col-sm-3 col-md-2 col-sm-pull-9 col-md-pull-10 sidebar-pf sidebar-pf-left">

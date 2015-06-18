@@ -31,7 +31,8 @@
                 case 'development':
                     Assets::css(array(
                         Url::templatePath() . 'css/bootstrap.css',
-                        //Url::templatePath() . 'css/font-awesome.css',
+                        Url::templatePath() . 'css/bootstrap-datetimepicker.css',
+                        Url::templatePath() . 'css/font-awesome.css',
                         Url::templatePath() . 'css/jquery.dataTables.css',
                         Url::templatePath() . 'css/patternfly.css',
                         Url::templatePath() . 'css/c3.css',
@@ -42,8 +43,9 @@
                 default:
                     Assets::css(array(
                         '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css',
+                        Url::templatePath() . 'css/bootstrap-datetimepicker.min.css',
                         '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css',
-                        /*'//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css',*/
+                        '//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css',
                         Url::templatePath() . 'css/patternfly.min.css',
                         Url::templatePath() . 'css/c3.min.css',
                         Url::templatePath() . 'css/scouts.css',

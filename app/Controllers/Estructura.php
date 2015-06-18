@@ -20,12 +20,12 @@
             $this->modelo = new \Models\Estructura();
         }
     
-        private function render($data)
+        private function render($data, $mode = 'lists')
         {
             View::renderTemplate('header', $data);
             View::renderTemplate('navbar', $data);
             //View::render('lists/'.strtolower ($data['title']), $data);
-            View::render('lists/estructura', $data);
+            View::render($mode.'/estructura', $data);
             View::renderTemplate('footer', $data);            
         }
     
@@ -39,6 +39,19 @@
             $data['entries'] = $this->modelo->getEstructura($index);
     
             $this->render($data);
+
+        }
+
+         public function nuevo($index = Models\Estructuras::Region)
+        {
+    
+            if(Session::get('loggin') == false) { Url::redirect(''); }
+    
+            $data['title'] = $this->language->get('titles', $index);
+            $data['subtitle'] = $this->language->get('subtitles', $index);
+            //$data['entries'] = $this->modelo->getDirectorio($index);
+    
+            $this->render($data,'editors');
 
         }
         
@@ -55,6 +68,10 @@
         public function grupos()
         {           
             return $this->index(Models\Estructuras::Grupo);
+        }
+          public function nuevo_grupo()
+        {
+            return  $this->nuevo(Models\Estructuras::Grupo);
         }
 
         public function patrullas()

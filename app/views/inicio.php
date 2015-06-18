@@ -14,7 +14,21 @@
 <div class="container-fluid" style="padding-top: 70px;">
     <div class="row">
         <div class="col-sm-8 col-md-9">
-            
+            <form class="col-sm-2 form-horizontal" action="login" method="post">
+                <div class="form-group">
+                    <label class="control-label" for="usernameInput-markup">Correo</label>
+                    <div>
+                        <input id="usernameInput-markup" class="form-control" type="email" name="username" placeholder="Correo">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="passwordInput-markup">Clave</label>
+                    <div>
+                        <input id="passwordInput-markup" class="form-control" type="password" name="password" placeholder="Clave">
+                    </div>
+                </div>
+                <input class="btn btn-default" type="submit" name="submit" value="Iniciar">
+            </form>
         </div>
         <div class="col-sm-4 col-md-3 sidebar-pf sidebar-pf-right">
             <div class="sidebar-header sidebar-header-bleed-left sidebar-header-bleed-right">

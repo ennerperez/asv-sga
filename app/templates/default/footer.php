@@ -20,8 +20,10 @@
                 case 'development':
                     Assets::js(array(
                         Url::templatePath() . 'js/jquery.js',
-                        Url::templatePath() . 'js/bootstrap.js',
                         Url::templatePath() . 'js/jquery.dataTables.js',
+                        Url::templatePath() . 'js/moment.js',
+                        Url::templatePath() . 'js/bootstrap.js',
+                        Url::templatePath() . 'js/bootstrap-datetimepicker.js',
                         Url::templatePath() . 'js/patternfly.js',
                         Url::templatePath() . 'js/scripts.js'
                     ));
@@ -29,8 +31,10 @@
                 default:
                      Assets::js(array(
                         '//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js',
-                        '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js',
                         '//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js',
+                        Url::templatePath() . 'js/moment.min.js',
+                        '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js',
+                        Url::templatePath() . 'js/bootstrap-datetimepicker.min.js',
                         Url::templatePath() . 'js/patternfly.min.js',
                         Url::templatePath() . 'js/scripts.js'
                     ));
