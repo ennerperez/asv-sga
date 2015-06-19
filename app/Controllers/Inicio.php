@@ -25,6 +25,8 @@
 
             if(Session::get('loggin') == false) { Url::redirect(''); }
 
+            $data['title'] = 'SGA';
+
             View::renderTemplate('header', $data);
             View::renderTemplate('navbar', $data);
             View::render('admin/dashboard', $data);
