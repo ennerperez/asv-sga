@@ -21,10 +21,11 @@
             <span class="i pficon pficon-info"></span>
             <?php echo $menu->get('sinalertas'); ?>
         </li>
-                    <!--<li class="list-group-item">
-                                                                      <span class="i pficon pficon-info"></span>
-                                                                      Modified Datasources ExampleDS
-                                                                    </li>-->
+        <!--
+        <li class="list-group-item">
+            <span class="i pficon pficon-info"></span> Modified Datasources ExampleDS
+        </li>
+        -->
     </ul>
     <div class="footer"><a href="#">Limipiar</a></div>
 </div>

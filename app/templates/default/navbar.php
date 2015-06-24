@@ -30,19 +30,18 @@
     <div class="collapse navbar-collapse navbar-collapse-1">
         <ul class="nav navbar-nav navbar-utility">
             <li class="hidden-xs">
-                <a href="http://www.scoutsvenezuela.org.ve/soporte/?v=submit_ticket" target="_blank">
+                <a href="http://www.scoutsvenezuela.org.ve/soporte/?v=submit_ticket" target="_blank" role="button" aria-expanded="false">
                     <span class="fa fa-at"></span>
+                    &nbsp;&nbsp;Soporte
                 </a>
             </li>
             <li class="dropdown">
-                 <?php if (Session::get('loggin') == true) { View::render('admin/alerts');} ?>
+                 <?php View::render('alerts'); ?>
             </li>
             <li class="dropdown">
-                <?php if (Session::get('loggin') == true) { View::render('admin/menu');}
-                                                   else { View::render('admin/login', $data);} ?>
+                <?php View::render('profile', $data); ?>
             </li>
-        </ul>       
-            <?php if (Session::get('loggin') == true) { View::render('admin/navbar');}
-                                                   else { View::render('navbar', $data);} ?>
+        </ul>
+        <?php View::render('navbar', $data); ?>
     </div>
 </nav>

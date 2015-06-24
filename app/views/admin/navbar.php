@@ -10,8 +10,7 @@
     
 ?>
 
-<ul class="nav navbar-nav navbar-primary">
-    <li><a href="/"><?php echo $menu->get('inicio'); ?></a></li>
-    <li><a href="/estructura"><?php echo $menu->get('estructura'); ?></a></li>
-    <li><a href="/directorio"><?php echo $menu->get('directorio'); ?></a></li>
-</ul>
+
+<li><a href="/"><?php echo $menu->get('inicio'); ?></a></li>
+<li><a href="/estructura"><?php echo $menu->get('estructura'); ?></a></li>
+<li><a href="/directorio"><?php echo $menu->get('directorio'); ?></a></li>

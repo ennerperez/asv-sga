@@ -46,7 +46,7 @@
 
             View::renderTemplate('header', $data);
             View::renderTemplate('navbar', $data);
-            View::render('inicio', $data);
+            View::render('index', $data);
             View::renderTemplate('footer', $data);
         }
     
