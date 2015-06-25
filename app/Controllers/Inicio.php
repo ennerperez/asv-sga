@@ -17,7 +17,7 @@
         {
             parent::__construct();
             //$this->language->load('Inicio');
-            $this->inicio = new \Models\Inicio();
+            $this->modelo = new \Models\Inicio();
         }
        
         public function dashboard()
@@ -25,7 +25,8 @@
 
             if(Session::get('loggin') == false) { Url::redirect(''); }
 
-            $data['title'] = 'SGA';
+            $data['title'] = 'Bienvenida';
+			$data['entries'] = $this->modelo->getAnuncios(Models\Anuncios::Usuario, Session::get('userdata')->id);//, Models\Admin::Id);
 
             View::renderTemplate('header', $data);
             View::renderTemplate('navbar', $data);
@@ -43,6 +44,9 @@
         {
 
             if(Session::get('loggin') == true) { Url::redirect('admin'); }
+
+			$data['title'] = 'Inicio';
+			$data['entries'] = $this->modelo->getAnuncios(Models\Anuncios::Publico);
 
             View::renderTemplate('header', $data);
             View::renderTemplate('navbar', $data);

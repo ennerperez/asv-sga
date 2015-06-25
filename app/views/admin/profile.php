@@ -12,7 +12,7 @@
 
 <a href="#" data-toggle="dropdown" role="button" aria-expanded="false">
     <span class="pficon pficon-user"></span>
-    Bienvenido
+    <?php echo Session::get("userdata")->usuario; ?>
 </a>
 <ul class="dropdown-menu" role="menu">
     <li><a href="#"><?php echo $menu->get('perfil'); ?></a></li>

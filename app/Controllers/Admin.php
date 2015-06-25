@@ -35,6 +35,7 @@
                 }
                 else{
                     Session::set('loggin',true);
+					Session::set('userdata', $this->modelo->getData($username, $_hash));
                     Url::redirect('admin');
                 }
             }           
@@ -42,6 +43,7 @@
         }
     
         public function logout(){   
+			Session::set('loggin',false);
             Session::destroy();
             Url::redirect('');
         }

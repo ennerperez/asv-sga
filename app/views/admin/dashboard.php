@@ -2,6 +2,7 @@
     use Core\Language;
     use Core\View;
     
+	use Helpers\Session;
     use Helpers\Assets;
     use Helpers\Url;
     use Helpers\Hooks;
@@ -15,9 +16,9 @@
         <div class="col-sm-8 col-md-9">
             <div class="page-header page-header-bleed-right">
                 <div class="actions pull-right">
-                    <a href="#"><span class="pficon pficon-refresh"></span> Recargar</a>
+                    <a href="admin"><span class="pficon pficon-refresh"></span>Recargar</a>
                 </div>
-                <h1>Bienvenido</h1>
+                <h1>Bienvenido, <?php echo Session::get("userdata")->nombre.' '.Session::get("userdata")->apellido; ?></h1>
             </div>
             <h2 class="h4">Crecimiento de la población</h2>
             <div id="chart0" style="max-height: 128px;"></div>
@@ -50,13 +51,7 @@
                 </div>
                 <h2 class="h5">Últimas notificaciones</h2>
             </div>
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <h3 class="list-group-item-heading">Duis eu augue lectus</h3>
-                    <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
-                </li>
-            </ul>
-            <p><a href="#">Ver todos</a></p>
+            <?php  View::render('general/announcements', $data); ?>
         </div>
     </div>
 </div>

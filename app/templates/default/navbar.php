@@ -31,8 +31,8 @@
         <ul class="nav navbar-nav navbar-utility">
             <li class="hidden-xs">
                 <a href="http://www.scoutsvenezuela.org.ve/soporte/?v=submit_ticket" target="_blank" role="button" aria-expanded="false">
-                    <span class="fa fa-at"></span>
-                    &nbsp;&nbsp;Soporte
+					<span class="pficon pficon-help"></span>
+                    Soporte
                 </a>
             </li>
             <li class="dropdown">

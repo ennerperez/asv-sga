@@ -29,6 +29,7 @@ class Config
 
         //set a default language
         define('LANGUAGE_CODE', 'es');
+		setlocale(LC_TIME, "es_VE"); 
 
         //site address
         if ($_SERVER['HTTP_HOST'] == 'scoutsvenezuela.org.ve' ) {
@@ -39,17 +40,18 @@ class Config
         }
 
         //database details ONLY NEEDED IF USING A DATABASE
-        define('DB_TYPE', 'mysql');
         define('DB_HOST', 'localhost');
 
          switch (ENVIRONMENT) {
              case 'development':
+				define('DB_TYPE', 'mssql');
                 define('DB_NAME', 'scouts');
                 define('DB_USER', 'root');
                 define('DB_PASS', '123456');
                 define('PREFIX', '');
                break;
              default:
+				define('DB_TYPE', 'mysql');
                 define('DB_NAME', 'scoutsve_sga');
                 define('DB_USER', 'scoutsve_sga');
                 define('DB_PASS', '!@DDUA~wB;');

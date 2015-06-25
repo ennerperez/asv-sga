@@ -12,7 +12,7 @@
         <img class="img-responsive" style="padding-top: 20px; width: 100%;" src="http://www.scoutsvenezuela.org.ve/images/banners/Banner-2015.png" alt="">
         <hr />
         <h1>Iniciar sesión</h1>
-        <p>Bienvenido al sistema de gestión administrativa, para comenzar a trabajar en el sistema debe acceder con su correo electronico y contraseña suministrada.</p>
+        <p>Bienvenido al sistema de gestión administrativa, para comenzar a trabajar en el sistema debe acceder con su correo electrónico y contraseña suministrada.</p>
         <hr />
     </div>
 </div>

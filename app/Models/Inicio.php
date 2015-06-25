@@ -3,30 +3,49 @@
 namespace Models;
     
 use Core\Model;
-    
+
+abstract class Anuncios
+{
+    const Publico = 0;
+    const Usuario = 5;
+	const Grupo = 7;
+	const Distrito = 8;
+	const Region = 9;
+}
+
 class Inicio extends Model 
 {    
     function __construct(){
         parent::__construct();
     }  
-          
-    //public function getEstructura($type = Estructuras::Region){
 
-    //    //switch ($type){
-    //    //    case Estructuras::Region:
-    //    //        $this->select = "SELECT id, codigo, nombre, geonameid FROM ".PREFIX."regiones;";
-    //    //        break;
-    //    //    case Estructuras::Distrito:
-    //    //        $this->select = "SELECT id, codigo, nombre, region FROM ".PREFIX."distritos;";
-    //    //        break;
-    //    //    case Estructuras::Grupo:
-    //    //        $this->select = "SELECT id, codigo, nombre, distrito, descripcion, direccion, geonameid, creacion, modificacion, control, activo FROM ".PREFIX."grupos;";
-    //    //        break;
-    //    //    case Estructuras::Patrulla:
-    //    //        $this->select = "SELECT id, grupo, nombre, distintivo, clase, creacion FROM ".PREFIX."patrullas;";
-    //    //        break;
-    //    //}
+	public function getAnuncios($type = Anuncios::Publico, $entity = null){
+        
+		$sql = "SELECT id, titulo, resumen, descripcion, fecha, autor, entidad, tipo, activo, leido FROM ".PREFIX."anuncios";
+        $params = array();
+		
+		switch ($type){
+            case Anuncios::Publico:
+				$sql = $sql." WHERE (tipo = :tipo AND activo = 1)";
+				$params = array(":tipo" => $type);	       
+				break;
+			default:
+				if ($entity != null)
+				{
+					$sql = $sql." WHERE (tipo = 0) OR (tipo = :tipo AND entidad = :entidad ) AND activo = 1 AND leido = 0";
+					$params = array(":tipo" => $type, ":entidad" => $entity);	       
+				}
+				else
+				{
+					$sql = $sql." WHERE (tipo = :tipo AND activo = 1)";
+					$params = array(":tipo" => $type);	       
+				}
+				break;
+		}
 
-    //    //return $this->db->select($this->select);
-    //}    
+		$this->select = $sql;
+		
+        return $this->db->select($this->select, $params);
+    }   
+   
 }
