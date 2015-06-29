@@ -32,4 +32,4 @@
     }
     
 </style>
-<button class="y hC" tabindex="0">+</button>
+<button class="y hC" tabindex="0" onclick="window.location.href=window.location.href+'/nuevo'" >+</button>

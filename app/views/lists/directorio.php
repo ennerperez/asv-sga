@@ -18,7 +18,7 @@
             <div class="nav-category">
                 <h2>Movimiento</h2>
                 <ul class="nav nav-pills nav-stacked">
-                    <li><a class="scouts" href="/directorio"><i class="fa fa-anchor"></i>General</a></li>
+                    <!--<li><a class="scouts" href="/directorio"><i class="fa fa-anchor"></i>General</a></li>-->
                     <li><a class="adultos" href="/adultos"><i class="fa fa-male"></i>Adultos</a></li>
                     <li><a class="jovenes" href="/jovenes"><i class="fa fa-child"></i>Jovenes</a></li>
                     <li><a class="patrocinantes" href="/patrocinantes"><i class="fa fa-building"></i>Patrocinantes</a></li>
