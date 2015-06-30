@@ -7,8 +7,8 @@
     <div class="row">
         <div class="col-sm-9 col-md-10 col-sm-push-3 col-md-push-2">
             <ol class="breadcrumb">
-                <li><a href="#">Inicio</a></li>
-                <li>Directorio</li>
+                <li><a href="."><?php echo $data['title']; ?></a></li>
+                <li>Nuevo registro</li>
             </ol>
             <h1><?php echo $data['title']; ?></h1>
             <hr />
@@ -27,10 +27,10 @@
               <div id="collapseOne" class="panel-collapse collapse in">
                 <div class="panel-body">
                   <ul class="nav nav-pills nav-stacked">
-                    <li class="active"><a href="#">Identificación</a></li>
-                    <li><a href="#">Contacto</a></li>
-                      <li><a href="#">Medicos</a></li>
-                    <li><a href="#">Adicionales</a></li>
+                    <li class="active"><a href="#identification" aria-controls="identification" role="tab" data-toggle="tab">Identificación</a></li>
+                    <li><a href="#contact" aria-controls="identification" role="tab" data-toggle="tab">Contacto</a></li>
+                    <li><a href="#medic" aria-controls="identification" role="tab" data-toggle="tab">Medicos</a></li>
+                    <li><a href="#aditional" aria-controls="identification" role="tab" data-toggle="tab">Adicionales</a></li>
                   </ul>
                 </div>
               </div>

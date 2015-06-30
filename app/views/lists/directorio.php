@@ -6,10 +6,6 @@
 <div class="container-fluid" style="padding-top: 70px;">
     <div class="row">
         <div class="col-sm-9 col-md-10 col-sm-push-3 col-md-push-2">
-            <ol class="breadcrumb">
-                <li><a href="#">Inicio</a></li>
-                <li>Directorio</li>
-            </ol>
             <h1><?php echo $data['title']; ?></h1>
             <hr />
             <?php View::render('lists/directorio/'.strtolower ($data['title']), $data); ?>
@@ -37,8 +33,11 @@
 <?php View::render('elements/md-button'); ?>
 
 <script>
-    // Initialize Datatables
     $(document).ready(function() {
-      $('.datatable').dataTable();
+      $('#datatable').DataTable({
+            "language": {
+                "url": "<?php echo 'app/language/'.LANGUAGE_CODE.'/DataTable.json'; ?>"
+            }
+        });
     });
 </script>

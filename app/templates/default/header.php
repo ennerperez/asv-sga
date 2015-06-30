@@ -36,16 +36,39 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 
+
+		<!-- jQuery-->
+		<?php
+            switch (ENVIRONMENT) {
+                case 'development':
+                    Assets::js(array(
+                        Url::templatePath() . 'js/jquery.js',
+                        Url::templatePath() . 'js/jquery.dataTables.js'
+                    ));
+                    break;
+                default:
+                     Assets::js(array(
+                        '//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js',
+                        '//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js'
+                    ));
+                    break;
+            }
+    
+			//hook for plugging in javascript
+			$hooks->run('js');
+		?>
+
         <!-- CSS -->
         <?php
             
             switch (ENVIRONMENT) {
                 case 'development':
                     Assets::css(array(
+						Url::templatePath() . 'css/jquery.dataTables.css',
                         Url::templatePath() . 'css/bootstrap.css',
                         Url::templatePath() . 'css/bootstrap-datetimepicker.css',
-                        Url::templatePath() . 'css/font-awesome.css',
-                        Url::templatePath() . 'css/jquery.dataTables.css',
+						Url::templatePath() . 'css/dataTables.bootstrap.css',
+						Url::templatePath() . 'css/font-awesome.css',
                         Url::templatePath() . 'css/patternfly.css',
                         Url::templatePath() . 'css/c3.css',
                         Url::templatePath() . 'css/scouts.css',
@@ -54,10 +77,11 @@
                     break;
                 default:
                     Assets::css(array(
+						'//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css',
                         '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css',
                         Url::templatePath() . 'css/bootstrap-datetimepicker.min.css',
+						'//cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.css',
                         '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css',
-                        '//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css',
                         Url::templatePath() . 'css/patternfly.min.css',
                         Url::templatePath() . 'css/c3.min.css',
                         Url::templatePath() . 'css/scouts.css',

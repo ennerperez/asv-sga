@@ -1,104 +1,154 @@
+<?php
+    use Core\Language;
+    use Core\View;
+?>
+
 <form class="form-horizontal">
-    <div class="form-group">
-        <label class="col-md-2 control-label" for="textInput">DNI</label>
-        <div class="col-md-6">
-            <input type="text" id="textInput" class="form-control">
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="col-md-2 control-label" for="textInput2">Primer nombre</label>
-        <div class="col-md-6">
-            <input type="text" id="textInput2" class="form-control">
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="col-md-2 control-label" for="textInput3">Segundo nombre</label>
-        <div class="col-md-6">
-            <input type="text" id="textInput3" class="form-control">
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="col-md-2 control-label" for="textInput4">Primer apellido</label>
-        <div class="col-md-6">
-            <input type="text" id="textInput4" class="form-control">
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="col-md-2 control-label" for="textInput5">Segundo apellido</label>
-        <div class="col-md-6">
-            <input type="text" id="textInput5" class="form-control">
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="col-md-2 control-label" for="textInput6">Fecha de nacimiento</label>
-        <div class="col-md-6">
-            <div class="input-group date" id="datetimepicker1">
-                <input type="text" id="textInput6" class="form-control" />
-                <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                </span>
-            </div>
-            <script type="text/javascript">
-                $(function () {
-                    $('#datetimepicker1').datetimepicker();
-                });
-            </script>
-        </div>
-    </div>   
-    <div class="form-group">
-        <label class="col-md-2 control-label">Genero</label>
-        <div class="col-md-6">
-            <div class="radio">
-                <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-                    Femenino
-                </label>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                    Masculino
-                </label>
-            </div>
-        </div>
-    </div>
-    <!--<div class="form-group">
-        <label class="col-md-2 control-label" for="boostrapSelect">Vestibulum</label>
-        <div class="col-md-10">
-            <select class="selectpicker" multiple="" data-selected-text-format="count>3" id="boostrapSelect" style="display: none;">
-                <option>Mustard</option>
-                <option>Ketchup</option>
-                <option>Relish</option>
-                <option>Onions</option>
-                <option>Mushrooms</option>
-                <option>Pickles</option>
-                <option>Mayonnaise</option>
-                <option data-divider="true"></option>
-                <option data-subtext="Hot">Tabasco</option>
-                <option data-subtext="Hotter">Sriracha</option>
-                <option data-subtext="Hottest">Wasabi</option>
-            </select><div class="btn-group bootstrap-select show-tick"><button type="button" class="btn dropdown-toggle selectpicker btn-default" data-toggle="dropdown" data-id="boostrapSelect" title="Nothing selected"><span class="filter-option pull-left">Nothing selected</span>&nbsp;<span class="caret"></span></button>
-                <div class="dropdown-menu open">
-                    <ul class="dropdown-menu inner selectpicker" role="menu">
-                        <li rel="0"><a tabindex="0" class="" style=""><span class="text">Mustard</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li>
-                        <li rel="1"><a tabindex="0" class="" style=""><span class="text">Ketchup</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li>
-                        <li rel="2"><a tabindex="0" class="" style=""><span class="text">Relish</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li>
-                        <li rel="3"><a tabindex="0" class="" style=""><span class="text">Onions</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li>
-                        <li rel="4"><a tabindex="0" class="" style=""><span class="text">Mushrooms</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li>
-                        <li rel="5"><a tabindex="0" class="" style=""><span class="text">Pickles</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li>
-                        <li rel="6"><a tabindex="0" class="" style=""><span class="text">Mayonnaise</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li>
-                        <li rel="7"><div class="div-contain"><div class="divider"></div></div></li>
-                        <li rel="8"><a tabindex="0" class="" style=""><span class="text">Tabasco<small class="muted text-muted">Hot</small></span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li>
-                        <li rel="9"><a tabindex="0" class="" style=""><span class="text">Sriracha<small class="muted text-muted">Hotter</small></span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li>
-                        <li rel="10"><a tabindex="0" class="" style=""><span class="text">Wasabi<small class="muted text-muted">Hottest</small></span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li>
-                    </ul>
-                </div></div>
-        </div>
-    </div>-->
-    <div class="form-group">
-        <div class="col-md-10 col-md-offset-2">
-            <button type="button" class="btn btn-primary">Guardar</button>
-            <button type="button" class="btn btn-default">Cancelar</button>
-        </div>
-    </div>
+	<div class="tab-content">
+		<div role="tabpanel" class="tab-pane fade in active" id="identification">
+			<h3>Informaci&oacute;n personal</h3>
+			<hr/>
+			<div class="form-group">
+				<label class="col-md-2 control-label" for="textInput-DNI">DNI</label>
+				<div class="col-md-6">
+					<input type="text" id="textInput-DNI" class="form-control" maxlength="25">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-2 control-label" for="textInput-FirstName">Primer nombre</label>
+				<div class="col-md-6">
+					<input type="text" id="textInput-FirstName" class="form-control" maxlength="50">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-2 control-label" for="textInput-SecondName">Segundo nombre</label>
+				<div class="col-md-6">
+					<input type="text" id="textInput-SecondName" class="form-control" maxlength="50">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-2 control-label" for="textInput-LastName">Primer apellido</label>
+				<div class="col-md-6">
+					<input type="text" id="textInput-LastName" class="form-control" maxlength="50">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-2 control-label" for="textInput-SurName">Segundo apellido</label>
+				<div class="col-md-6">
+					<input type="text" id="textInput-SurName" class="form-control" maxlength="50">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-2 control-label" for="datetimePicker-Brithdate">Nacimiento</label>
+				<div class="col-md-6">
+					<div class="input-group date" id="datetimePicker-Brithdate">
+						<input type="text" class="form-control" />
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-calendar"></span>
+						</span>
+					</div>
+					<script type="text/javascript">
+						$(function () {
+							$('#datetimePicker-Brithdate').datetimepicker({
+								locale: '<?php echo LANGUAGE_CODE; ?>',
+								format: 'l'
+							});
+						});
+					</script>
+				</div>
+			</div> 
+			<div class="form-group">
+				<label class="col-md-2 control-label" for="selectpicker-State">Estado civil</label>
+				<div class="col-md-6">
+					<select id="selectpicker-State" class="selectpicker form-control">
+						<option>Soltero</option>
+						<!--<option>Concubinato</option>-->
+						<option>Casado</option>
+						<option>Divorciado</option>
+						<option>Viudo</option>
+					</select>
+					<script>
+						//$(function () {
+							//$('#selectpicker-State').selectpicker();
+						//});
+					</script>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-2 control-label" for="selectpicker-Country">Nacionalidad</label>
+				<div class="col-md-6">
+					<select id="selectpicker-Country" class="selectpicker form-control">
+						<option>Venezolano</option>
+						<option>Extrangero</option>
+					</select>
+					<script>
+						//$(function () {
+							//$('#selectpicker-Country').selectpicker();
+						//});
+					</script>
+				</div>
+			</div>  
+			<div class="form-group">
+				<label class="col-md-2 control-label">Genero</label>
+				<div class="col-md-6">
+					<div class="radio">
+						<label>
+							<input type="radio" name="optionsRadios" id="optionsRadios-Genre" value="0" checked="">
+							Femenino
+						</label>
+					</div>
+					<div class="radio">
+						<label>
+							<input type="radio" name="optionsRadios" id="optionsRadios-Genre" value="1">
+							Masculino
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="contact">
+			<h3>Informaci&oacute;n de contacto</h3>
+			<hr/>
+			<div class="form-group">
+				<label class="col-md-2 control-label" for="textInput-Phone">Tel&eacute;fono</label>
+				<div class="col-md-6">
+					<input type="text" id="textInput-Phone" class="form-control" maxlength="25">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-2 control-label" for="textInput-Email">Correo</label>
+				<div class="col-md-6">
+					<input type="email" id="textInput-Email" class="form-control" maxlength="50">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-2 control-label" for="textInput-Address">Direcci&oacute;n</label>
+				<div class="col-md-6">
+					<textarea rows="3" id="textInput-Address" class="form-control" maxlength="255"></textarea>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-2 control-label">Ubicaci&oacute;n</label>
+				<div class="col-md-6">
+					<?php View::render('elements/gmap'); ?>		
+				</div>
+			</div>
+
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="medic">
+			<h3>Informaci&oacute;n medica</h3>
+			<hr/>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="aditional">
+			<h3>Informaci&oacute;n adicional</h3>
+			<hr/>
+		</div>
+		<hr />
+		<div class="form-group">
+			<div class="col-md-10 col-md-offset-2">
+	            <button type="button" class="btn btn-primary">Guardar</button>
+				<button type="button" class="btn btn-default">Cancelar</button>
+			</div>
+		</div>
+	</div>
 </form>

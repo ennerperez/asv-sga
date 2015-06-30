@@ -32,8 +32,11 @@
 <?php View::render('elements/md-button'); ?>
 
 <script>
-    // Initialize Datatables
     $(document).ready(function() {
-      $('.datatable').dataTable();
+      $('#datatable').DataTable({
+            "language": {
+                "url": "<?php echo 'app/language/'.LANGUAGE_CODE.'/DataTable.json'; ?>"
+            }
+        });
     });
 </script>
