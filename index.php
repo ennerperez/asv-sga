@@ -27,7 +27,7 @@
      * NOTE: If you change these, also change the error_reporting() code below
      *
      */
-    if ($_SERVER['HTTP_HOST'] == 'scoutsvenezuela.org.ve' ) {
+    if ($_SERVER['HTTP_HOST'] == 'registro.scoutsvenezuela.org.ve' ) {
         define('ENVIRONMENT', 'production');
         }
     else{

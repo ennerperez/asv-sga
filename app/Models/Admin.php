@@ -21,7 +21,7 @@ class Admin extends Model {
 	public function getData($username, $hash){
 
 		$params = array(':usuario' => $username, ':clave' => $hash);
-		$data = $this->db->select("SELECT u.id, u.usuario, d.nombre, d.apellido FROM ".PREFIX."usuarios as U INNER JOIN ".PREFIX."directorio as D on u.directorio = d.id WHERE (u.usuario = :usuario AND u.clave = :clave) AND u.activo = 1", $params);	
+		$data = $this->db->select("SELECT u.id, u.usuario, d.nombre, d.apellido FROM ".PREFIX."usuarios as u INNER JOIN ".PREFIX."directorio as d on u.directorio = d.id WHERE (u.usuario = :usuario AND u.clave = :clave) AND u.activo = 1", $params);	
 		
 		$this->setAccess($data[0]->id);
 

@@ -26,8 +26,8 @@ class Directorio extends Model
         switch ($type)
         {
             case Directorios::Usuario:
-                $this->select = "SELECT U.id, D.dni, D.clase, D.nombre, D.apellido, D.genero, D.nacimiento FROM ".PREFIX."usuarios ".
-                                " AS U INNER JOIN ".PREFIX."directorio AS D ON U.directorio = D.id";
+                $this->select = "SELECT u.id, d.dni, d.clase, d.nombre, d.apellido, d.genero, d.nacimiento FROM ".PREFIX."usuarios ".
+                                " AS u INNER JOIN ".PREFIX."directorio AS d ON u.directorio = d.id";
                 
                 break;
             default:
