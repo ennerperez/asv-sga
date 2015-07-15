@@ -1,0 +1,4 @@
+#logo, .navbar-brand, .navbar-brand:hover {
+    width: 64px !important;
+    height: 64px !important;
+}

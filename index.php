@@ -33,6 +33,21 @@
     else{
         define('ENVIRONMENT', 'development');
         }
+
+     define('APIVERSION', 'v1');
+
+    /*
+     *---------------------------------------------------------------
+     * INTERNET CONNECTION
+     *---------------------------------------------------------------
+     */
+    $connected = @fsockopen("www.google.com", 80); 
+    if ($connected){
+        define('APPSTATE', 'online');
+        fclose($connected);
+    }else{
+        define('APPSTATE', 'offline');
+    }
     
     /*
      *---------------------------------------------------------------
@@ -54,38 +69,7 @@
                 exit('The application environment is not set correctly.');
         }
     }
+
     //initiate config
-    new Core\Config();
-    //create alias for Router
-    use Core\Router;
-    use Helpers\Hooks;
-    //define routes
-    Router::any('', 'Controllers\Inicio@index');
-    Router::any('admin', 'Controllers\Inicio@dashboard');
-    //Router::any('login', 'Controllers\Admin@login');
-    Router::get('login', 'Controllers\Admin@login');
-    Router::post('login', 'Controllers\Admin@login');
-    Router::get('logout', 'Controllers\Admin@logout');
-    //Router::any('logout', 'Controllers\Admin@logout');
-    Router::any('estructura', 'Controllers\Estructura@index');
-    Router::any('regiones', 'Controllers\Estructura@regiones');
-    Router::any('distritos', 'Controllers\Estructura@distritos');
-    Router::any('grupos', 'Controllers\Estructura@grupos');
-    Router::any('grupos/nuevo', 'Controllers\Estructura@nuevo_grupo');
-    Router::any('patrullas', 'Controllers\Estructura@patrullas');
-    Router::any('areas', 'Controllers\Estructura@areas');
-    Router::any('directorio', 'Controllers\Directorio@index');
-    Router::any('adultos', 'Controllers\Directorio@adultos');
-    Router::any('adultos/nuevo', 'Controllers\Directorio@nuevo_adulto');
-    Router::any('jovenes', 'Controllers\Directorio@jovenes');
-    Router::any('patrocinantes', 'Controllers\Directorio@patrocinantes');
-    Router::any('usuarios', 'Controllers\Directorio@usuarios');
-    //module routes
-    $hooks = Hooks::get();
-    $hooks->run('routes');
-    //if no route found
-    Router::error('Core\Error@index');
-    //turn on old style routing
-    Router::$fallback = false;
-    //execute matched routes
-    Router::dispatch();
+    require 'routing.php';
+    

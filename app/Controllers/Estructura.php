@@ -64,6 +64,11 @@
         {           
             return $this->index(Models\Estructuras::Distrito);
         }
+        
+        //public function distritos($distrito)
+        //{
+        //     return $this->index(Models\Estructuras::Distrito);           
+        //}
 
         public function grupos()
         {           
@@ -79,5 +84,40 @@
             return $this->index(Models\Estructuras::Patrulla);
         }
 
-    
+        // API
+        
+        public function get_regiones()
+        {
+            header('Content-Type: application/json');
+
+            if (isset($_GET["cargos"]))
+            {
+                echo json_encode($this->modelo->getCargo( Models\Estructuras::Region));
+            }
+            else{
+                echo json_encode($this->modelo->getEstructura( Models\Estructuras::Region));
+            }
+        }        public function get_distritos()
+        {
+            header('Content-Type: application/json');
+
+            if (isset($_GET["cargos"]))
+            {
+               echo json_encode($this->modelo->getCargo( Models\Estructuras::Distrito));
+            }
+            else{
+               echo json_encode($this->modelo->getEstructura( Models\Estructuras::Distrito));
+            }
+        }        public function get_grupos()
+        {
+            header('Content-Type: application/json');
+
+            if (isset($_GET["cargos"]))
+            {
+                echo json_encode($this->modelo->getCargo( Models\Estructuras::Grupo));
+            }
+            else{
+                echo json_encode($this->modelo->getEstructura( Models\Estructuras::Grupo));
+            }
+        }            
     }

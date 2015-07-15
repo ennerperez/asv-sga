@@ -12,6 +12,8 @@
 
 <ul class="nav navbar-nav navbar-primary">
 
-    <?php if (Session::get('loggin') == true) { View::render('admin/navbar');} ?>
+    <?php if (Session::get('loggin') == true &&
+              (Session::get('userdata')->confidencial != 1 && (int)Session::get('userdata')->dni > 0)) 
+              { View::render('admin/navbar');} ?>
 
 </ul>

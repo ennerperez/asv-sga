@@ -36,10 +36,19 @@
                 else{
                     Session::set('loggin',true);
 					Session::set('userdata', $this->modelo->getData($username, $_hash));
-                    Url::redirect('admin');
                 }
-            }           
-    
+            }
+
+            //var_dump(Session::get('userdata')->dni);
+
+            if (Session::get('userdata')->confidencial == 1 && (int)Session::get('userdata')->dni < 0)
+            {
+                Url::redirect('admin/registro');
+            }
+            else
+            {
+                Url::redirect('admin');
+            }
         }
     
         public function logout(){   
@@ -48,4 +57,17 @@
             Url::redirect('');
         }
 
+        public function registro()
+        {
+            if(Session::get('loggin') == false) { Url::redirect(''); }
+
+            $data['title'] = 'Registro';
+			//$data['entries'] = $this->modelo->getAnuncios(Models\Anuncios::Usuario, Session::get('userdata')->id);//, Models\Admin::Id);
+
+            View::renderTemplate('header', $data);
+            View::renderTemplate('navbar', $data);
+            View::render('admin/registro', $data);
+            View::renderTemplate('footer', $data);
+        }
+        
     }

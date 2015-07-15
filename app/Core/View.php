@@ -63,9 +63,9 @@ class View
         }
 
         if ($custom == false) {
-            require "app/templates/".TEMPLATE."/$path.php";
+            require "app/Templates/".TEMPLATE."/$path.php";
         } else {
-            require "app/templates/$custom/$path.php";
+            require "app/Templates/$custom/$path.php";
         }
     }
 

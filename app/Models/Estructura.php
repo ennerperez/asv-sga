@@ -36,5 +36,30 @@ class Estructura extends Model
         }
 
         return $this->db->select($this->select);
-    }    
+    }   
+    
+     public function getCargo($type = Estructuras::Region)
+     {
+
+         $this->select = "SELECT id, nombre FROM ".PREFIX."cargos";
+         $where = ";";
+
+         switch ($type){
+            case Estructuras::Grupo:
+                $where = " WHERE id BETWEEN 1 AND 85;";
+                break;
+            case Estructuras::Distrito:
+                $where = " WHERE id BETWEEN 86 AND 128;";
+                break;
+            case Estructuras::Region:
+                 $where = " WHERE id BETWEEN 129 AND 192;";
+                break;
+            case Estructuras::Patrulla:
+                $where = " WHERE id BETWEEN 215 AND 222;";
+                break;
+        }
+
+        return $this->db->select($this->select.$where);
+     }
+     
 }
