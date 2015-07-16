@@ -1,6 +1,8 @@
 <?php
+
     use Core\Language;
     use Core\View;
+
 ?>
 
 <div class="container-fluid" style="padding-top: 70px;">

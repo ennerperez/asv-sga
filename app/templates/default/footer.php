@@ -14,6 +14,7 @@
 </footer>
 
 <script>
+
     $(function() {
         $('.sidebar-pf').css({ minHeight: $(window).innerHeight() + 'px' });
         $(window).resize(function() {
@@ -24,6 +25,7 @@
      $(document).ready(function() {
          $('.sidebar-pf').css({ minHeight: $(window).innerHeight() + 'px' });
     });
+
 </script>
 
 <?php    

@@ -101,6 +101,7 @@
                                 Url::templatePath() . 'js/jquery.dataTables.js',
                                 Url::templatePath() . 'js/bootstrap.js',
                                 Url::templatePath() . 'js/dataTables.bootstrap.js',
+								Url::templatePath() . 'js/jquery.bootstrap-autohidingnavbar.js',
                                 //Url::templatePath() . 'js/bootstrap-datepicker.js',
 						        //'//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/locales/bootstrap-datepicker.'.LANGUAGE_CODE.'.min.js',
                                 Url::templatePath() . 'js/bootlint.js',
@@ -114,6 +115,7 @@
                                 '//cdn.datatables.net/1.10.7/js/jquery.dataTables.js',
                                 '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.js',
                                 '//cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.js',
+								Url::templatePath() . 'js/jquery.bootstrap-autohidingnavbar.js',
                                 //'//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/js/bootstrap-datepicker.js',
 						        //'//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/locales/bootstrap-datepicker.'.LANGUAGE_CODE.'.min.js',
                                 '//maxcdn.bootstrapcdn.com/bootlint/0.12.0/bootlint.js',
@@ -129,6 +131,7 @@
                         '//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js',
                         '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js',
                         '//cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.js',
+						Url::templatePath() . 'js/jquery.bootstrap-autohidingnavbar.js',
                         //'//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/js/bootstrap-datepicker.min.js',
 						//'//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/locales/bootstrap-datepicker.'.LANGUAGE_CODE.'.min.js',
                         Url::templatePath() . 'js/scripts.js'

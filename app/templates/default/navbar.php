@@ -6,7 +6,8 @@
     
 ?>
 
-<nav class="navbar navbar-default navbar-fixed-top scout-bg" role="navigation">
+<div id="top"></div>
+<nav  class="navbar navbar-default navbar-fixed-top scout-bg" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1" aria-expanded="true">
@@ -39,4 +40,22 @@
 
 <script>
     $('.navbar-text').hide();
+	
+	$('.navbar-fixed-top').autoHidingNavbar({
+		// disable auto-hide
+		disableAutohide: false,
+		
+		// shows up when scrolling the page upwards
+		showOnUpscroll: true,
+		
+		// shows up when scroll reaches the page's end.
+		showOnBottom: true,
+		
+		// "auto" means the navbar height
+		hideOffset: 'auto', 
+		
+		// The duration of the show and hide animations
+		animationDuration: 300
+	});
+	
 </script>
