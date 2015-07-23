@@ -8,7 +8,7 @@
         <p>Bienvenido al sistema de gestión administrativa, para comenzar a trabajar en el sistema debe acceder con su correo electrónico y contraseña suministrada.</p>
     </div>
     <div class="col-xs-12">
-        <form id="login-form" class="form-horizontal" action="login" method="post" role="form">
+        <!--<form id="login-form" class="form-horizontal" action="login" method="post" role="form">
             <div class="panel panel-default" style="padding-top: 30px;">
                 <div class="panel-body">
                     <div class="container-fluid">
@@ -49,6 +49,10 @@
                     </div>
                 </div>
             </div>
-        </form>
+        </form>-->
+        <div class="jumbotron">
+                        <h3>En construcción</h3>
+                        <div class="alert alert-warning" role="alert">Lamentablemente esta sección aun se encuentra en construcción.</div>
+                    </div>
     </div>
 </div>

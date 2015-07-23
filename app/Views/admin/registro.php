@@ -39,16 +39,17 @@
                                     <div class="container-fluid">
                                         <div class="col-md-10 col-md-offset-2">
                                             <a class="btn btn-default" type="button" href="#top" data-toggle="collapse" data-target="#collapseRegistro1,#collapseRegistro2" aria-expanded="false">Anterior</a>
-                                            <a class="btn btn-primary" type="button" href="#top" data-toggle="collapse" data-target="#collapseRegistro2,#collapseRegistro3" aria-expanded="false">Siguiente</a>
+                                            <a class="btn btn-primary" type="button" href="#top" data-toggle="collapse" data-target="#collapseRegistro2,#collapseRegistro4" aria-expanded="false">Siguiente</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <!--
                         <div class="collapse fade" id="collapseRegistro3">
                             <div class="panel panel-default">
                                 <div class="panel-body">
-                                    <?php View::render('editors/directorio/adulto/registro'); ?>
+                                    View::render('editors/directorio/adulto/registro');
                                 </div>
                                 <div class="panel-footer">
                                     <div class="container-fluid">
@@ -60,6 +61,7 @@
                                 </div>
                             </div>
                         </div>
+                        -->
                         <div class="collapse fade" id="collapseRegistro4">
                             <div class="panel panel-default">
                                 <div class="panel-body">
@@ -68,7 +70,7 @@
                                 <div class="panel-footer">
                                     <div class="container-fluid">
                                         <div class="col-md-10 col-md-offset-2">
-                                            <a class="btn btn-default" type="button" href="#top" data-toggle="collapse" data-target="#collapseRegistro3,#collapseRegistro4" aria-expanded="false">Anterior</a>
+                                            <a class="btn btn-default" type="button" href="#top" data-toggle="collapse" data-target="#collapseRegistro2,#collapseRegistro4" aria-expanded="false">Anterior</a>
                                             <a class="btn btn-primary" type="button" href="#top" data-toggle="collapse" data-target="#collapseRegistro4,#collapseRegistro5" aria-expanded="false">Siguiente</a>
                                         </div>
                                     </div>

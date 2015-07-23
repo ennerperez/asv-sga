@@ -29,7 +29,7 @@ class View
                 header($header, true);
             }
         }
-        require "app/views/$path.php";
+        require "app/Views/$path.php";
     }
 
     /**
